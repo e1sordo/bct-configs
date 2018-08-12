@@ -3,7 +3,12 @@ spring:
     mongodb:
       host: localhost
       port: 27017
+      uri: ${MONGODB_CONNECTION_URI:mongodb://localhost:27017}
       database: city-service
+
+mongobee:
+  changelog:
+    path: com.vlavik.bct.city.changelogs
 
 logging:
   level:
